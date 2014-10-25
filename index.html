@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Student Enrollment Application</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Student Enrollment Application">
+  <meta name="author" content="Charles Carter">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Student Enrollment Application</h1>
+    <h2>Student enrollments by various factors</h2>
+    <p>Charles Carter<br/>Database Manager</p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Student Enrollment Application</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>This application displays in a graphical format the breakdown of student enrollments for the Academic Year 2013-2014. The purpose of this application is to provide some metrics on the relative performance of the components that are displayed.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Displayed Components</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>The following components are available:</p>
+
+<pre><code>1. Faculty Ranks
+2. Section Locations
+3. Term of Enrollment
+4. Academic levels
+5. Grades
+6. Student Locations
+7. Programs
+8. Subjects
+</code></pre>
+
+<pre><code class="R"># read in the data
+df &lt;- read.csv(&quot;../data/df.csv&quot;)
+# look at the names of the data
+names(df)
+# look at the structure of the data
+str(df)
+</code></pre>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Displayed Components</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Faculty Ranks</h3>
+
+<p>Student enrollments by faculty rank shows the number of discrete student enrollments for each rank, from professor, associate professor, assistant professor, to lecturer and adjunct (staff) instructors. This in part shows faculty utilization.</p>
+
+<h3>Section Locations</h3>
+
+<p>Course sections have a location. Distance learning sections have an `e&#39; location. On ground courses have a physical location. This shows the distribution of classes between synchronous and asynchronous course sections. This shows where the students are going for classes.</p>
+
+<h3>Terms</h3>
+
+<p>Terms refer to the time distribution of the enrollments in course sections. This shows the distribution of the student load throughout the year.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Displayed Components (continued)</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Academic Levels</h3>
+
+<p>Academic levels refer to the class level, freshman, sophomore, etc., through graduate. This metric tells what the level of enrollments are, that is, at what level does the institution need to expand, and what level needs improvement.</p>
+
+<h3>Grades</h3>
+
+<p>Grades shows the distribution of the outcome of student enrollments. Grade distribution is an important metric for academic effectiveness.</p>
+
+<h3>Student Locations</h3>
+
+<p>Students are assigned a particular location, depending on their initial campus and geographical location. The distribution of students shows the number of student enrollments from their location, in other words, where the students are coming from.</p>
+
+<h3>Programs</h3>
+
+<p>Programs refers to the active academic program the student is following. </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="class" id="id" style="background:;">
+  <hgroup>
+    <h2>Displayed Components (continued)</h2>
+  </hgroup>
+  <article data-timings="">
+    <h3>Academic Programs</h3>
+
+<p>Academic programs are the programs of study offered by the institution. These are most commonly referred to as `majors&#39;. This metric shows what the most popular programs are, and also which programs may need to be terminated or discontined.</p>
+
+<h3>Subjects (Departments)</h3>
+
+<p>Most subjects are taught by the similarly named department, for example, a Math course will be taught by the Math Department. The difference between subjects and departments is that students must take courses in many different departments regardless of their academic program, for example, a Criminal Justice major will have to take Psychology and Information Science. This metric tells how the students are distributed among the different departments.</p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Student Enrollment Application'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Displayed Components'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Displayed Components'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Displayed Components (continued)'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Displayed Components (continued)'>
+         5
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
